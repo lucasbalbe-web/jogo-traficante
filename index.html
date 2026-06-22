@@ -6,24 +6,81 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>City Runner</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
 
 <body>
 
+    <div class="char-select-screen">
+        <div class="char-select-box">
+            <h2>SELECIONE O JOGADOR</h2>
+            <div class="char-options">
+                <div class="char-card selected" data-char="trump" data-src="trump final.gif" data-class="trump-style">
+                    <div class="char-img-container">
+                        <img src="trump final.gif" alt="Trump">
+                    </div>
+                    <span>Trump</span>
+                </div>
+
+                <div class="char-card" data-char="mario" data-src="mario.gif" data-class="mario-style">
+                    <div class="char-img-container">
+                        <img src="mario.gif" alt="Mario">
+                    </div>
+                    <span>Mario</span>
+                </div>
+                <div class="char-card" data-char="megaman" data-src="megaman.gif" data-class="megaman-style">
+                    <div class="char-img-container">
+                        <img src="megaman.gif" alt="Megaman">
+                    </div>
+                    <span>Megaman</span>
+                </div>
+            </div>
+            <h2 style="margin-top: 30px;">SELECIONE O CENÁRIO</h2>
+            <div class="bg-options">
+                <div class="bg-card selected" data-bg="urbano" data-class="bg-urbano">
+                    <div class="bg-img-container">
+                        <img src="fundo urbano.png" alt="Urbano">
+                    </div>
+                    <span>Urbano</span>
+                </div>
+                <div class="bg-card" data-bg="floresta" data-class="bg-floresta">
+                    <div class="bg-img-container">
+                        <img src="istockphoto-1404630379-170667a.jpg" alt="Floresta">
+                    </div>
+                    <span>Floresta</span>
+                </div>
+
+                <div class="bg-card" data-bg="montanha" data-class="bg-montanha">
+                    <div class="bg-img-container">
+                        <img src="12484355-rochas-da-montanha-do-deserto-de-pixels-de-8-bits-paisagem-do-jogo-vetor.jpg" alt="Montanha">
+                    </div>
+                    <span>Montanha</span>
+                </div>
+            </div>
+
+            <button class="start-btn">INICIAR JOGO</button>
+        </div>
+    </div>
+
     <div class="placar">Pulos: <span id="contador">0</span></div>
 
     <div class="game-board">
         <img src="clouds.png" class="nuvem">
-        <img src="trump final.gif" class="trump">
+        <img src="trump final.gif" class="player trump-style">
         <img src="pato traficante final.gif" class="pato">
     </div>
 
     <div class="game-over">
         <div class="game-over-box">
             <h1>FIM DE JOGO</h1>
-            <button class="restart">REINICIAR</button>
+            <div class="game-over-buttons">
+                <button class="restart">REINICIAR</button>
+                <button class="menu-btn">VOLTAR AO MENU</button>
+            </div>
         </div>
     </div>
 
